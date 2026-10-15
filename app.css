@@ -1,0 +1,9 @@
+:root {
+  --bms-green: #1b4332;
+  --bms-green-light: #2d6a4f;
+  --bms-charcoal: #2b2d31;
+}
+body { background: #fff; color: var(--bms-charcoal); }
+.bms-navbar { background: var(--bms-green); }
+.bms-card { border-top: 3px solid var(--bms-green-light); }
+a { color: var(--bms-green-light); }

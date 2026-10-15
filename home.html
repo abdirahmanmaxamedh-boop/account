@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% block content %}
+<h1 class="h3 mb-1">Business Management System</h1>
+<p class="text-muted">Stage 1 complete: Django project, apps, and database are configured.</p>
+
+<div class="row g-3 mt-2">
+  {% for name, app, stage in modules %}
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="card bms-card h-100">
+      <div class="card-body">
+        <h2 class="h6 mb-1">{{ name }}</h2>
+        <div class="small text-muted">App: <code>{{ app }}</code></div>
+        <span class="badge bg-secondary mt-2">{{ stage }}</span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<p class="mt-4 small">
+  <a href="{% url 'core:health' %}">Health check</a> &middot;
+  <a href="{% url 'admin:index' %}">Admin</a>
+</p>
+{% endblock %}
